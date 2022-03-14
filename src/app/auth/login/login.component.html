@@ -1,0 +1,40 @@
+<!-- <form class="example-form">
+      <label>Email</label>
+      <input type="email" #email #Email="ngModel" autocomplete="off" id="Email" name="Email" class="form-control"
+      required maxlength="50" [(ngModel)]="myemail">
+  </form> -->
+
+  <!-- <form class="example-form">
+      <label>Email</label>
+      <input type="email" #email #Email="ngModel" autocomplete="off" id="Email" name="Email" class="form-control"
+      required maxlength="50" [(ngModel)]="myemail">
+  </form> -->
+  <form class="example-form">
+
+    <h1>Sign Up</h1>
+     <mat-form-field class="example-full-width" appearance="fill">
+       <mat-label>Email</mat-label>
+       <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+       <mat-error *ngIf="myerror('email','email')">
+         Please enter a valid email address
+       </mat-error>
+       <mat-error *ngIf="myerror('email','required')">
+         Email is <strong>required</strong>
+       </mat-error>
+     </mat-form-field>
+
+
+     <mat-form-field class="example-full-width" appearance="fill">
+       <mat-label>Password</mat-label>
+       <input type="Password" matInput formControlName="Password" placeholder="*****">
+       <mat-error *ngIf="myerror('Password','Password')">
+         Please enter a valid Password address
+       </mat-error>
+       <mat-error *ngIf="myerror('Password','required')">
+         Password is <strong>required</strong>
+       </mat-error>
+     </mat-form-field>
+   </form>
+
+     
+  
