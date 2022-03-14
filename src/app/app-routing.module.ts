@@ -1,14 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
-import { LoginComponent } from './auth/login/login.component';
+import { LoginComponent } from './login/login.component';
 import { ConContactusComponent } from './con-contactus/con-contactus.component';
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [ 
-  {
-    path : 'security',
-    loadChildren : () => import ('./auth/auth.module').then((m) => m.AuthModule)
-  },
+
   {
     path: '',
     component: HomeComponent
